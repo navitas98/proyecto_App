@@ -1,7 +1,8 @@
 import express from "npm:express@4.17.1";
 import { load } from "https://deno.land/std@0.204.0/dotenv/mod.ts";
+const PORT = Deno.env.get("PORT");
 const app = express();
-const PORT=4000;
+
 
 app.get('/', (req, res) => {
     console.log("Peticion recibida");
