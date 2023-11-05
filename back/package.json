@@ -1,0 +1,12 @@
+{
+  "name": "stock_app",
+  "version": "1.0.0",
+  "description": "Aplicacion full Stack",
+  "main": "main.ts",
+  "author": "Javier Navas",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
