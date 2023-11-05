@@ -22,15 +22,13 @@ if(!PORT){
 */// create express app
 const app = express();
 app.use(express.json());
-/*
+
 // create endpoints
 app
-  .get("/api/contactos", getAllContacts)
-  .get("/api/contactos/:dni", getContactFromDNI)
-  .post("/api/contactos", pushContact)
-  .put("/api/contactos/:dni", putContact)
-  .delete("/api/contactos/:dni", deleteContact);
-*/
+ .get('/',(req,res)=>{
+    res.status(200).send("conectado")
+ })
+
 // start express server
 app.listen(PORT, () => {
   console.info(`Server started on port  ${PORT}`);
