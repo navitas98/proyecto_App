@@ -5,7 +5,7 @@ const PORT=4000;
 
 app.get('/', (req, res) => {
     console.log("Peticion recibida");
-    res.send(PORT);
+    res.send("conectado");
 });
 
 
