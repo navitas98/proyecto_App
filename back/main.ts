@@ -24,12 +24,12 @@ if(!PORT){
 const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname,"public")));
-/*
+
 // create endpoints
 app
  .get('/',(req,res)=>{
-    res.status(200).send("conectado")
- })*/
+    res.status(200).sendFile("index.html")
+ })
 
 // start express server
 app.listen(PORT, () => {
