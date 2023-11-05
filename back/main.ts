@@ -1,6 +1,7 @@
 import express from "npm:express@4.17.1";
 import mongoose from "npm:mongoose@8.0.0";
 import { load } from "https://deno.land/std@0.204.0/dotenv/mod.ts";
+import { dirname, fromFileUrl } from "https://deno.land/std/path/mod.ts";
 import path from "path";
 const env = await load();
 const PORT = env.PORT;
@@ -22,8 +23,9 @@ if(!PORT){
 
 */// create express app
 const app = express();
+app.use(express.static(path.join(__dirname,'public')))
 app.use(express.json());
-app.use(express.static(path.join(__dirname,"public")));
+
 
 // create endpoints
 app
